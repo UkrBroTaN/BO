@@ -1,0 +1,62 @@
+img{
+    max-width: 90%;
+    min-width: 90%;
+    max-height: 90%;
+    min-height: 90%;
+}
+
+h6{
+    font-size: 30;
+    margin: 3%;
+}
+
+.BO{
+    font-size: 25;
+    text-align: center;
+}
+
+h1{
+    font-size: 35;
+    margin: 3%;
+}
+.container{
+    margin: 0% 8%;
+    background-color: white;
+}
+body{
+    background-color: #d3d3d3   ;
+}
+.BO1 a{/*навігація*/
+	font-size: 25;
+	color: #111 !important;
+	text-decoration: none;
+}
+HTML{
+	scroll-behavior: smooth
+}
+nav li {
+    list-style-type: none; /* Прибираємо маркери списку */
+    margin: 0; /* Видаляємо зовнішні відступи */
+    padding: 2%; /* Видаляємо внутрішні відступи */
+    display: inline-block; /* Вирівнюємо пункти меню в один рядок */
+}
+nav a{
+    text-decoration: none;
+}
+nav{
+    background-color: #a0a0a0;
+}
+.BO2{
+    text-align: right;
+}
+a{
+    font-size: 25;
+    text-decoration: none;
+    color: black;
+}
+.BO3{
+    text-align: right;
+}
+.BO4{
+    text-align: left;
+}
