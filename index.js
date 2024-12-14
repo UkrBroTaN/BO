@@ -1,3 +1,32 @@
+function checkAnswer(button, answer) {
+    const questionIndex = [...button.parentNode.parentNode.children].indexOf(button.parentNode) + 1;
+    const resultDiv = document.getElementById("result");
+
+    if (answer === correctAnswers[questionIndex]) {
+        button.style.backgroundColor = "green";
+        score++;
+    } else {
+        button.style.backgroundColor = "red";
+    }
+
+    // Disable buttons for the current question
+    button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
+
+    // Check if all questions are answered
+    const totalQuestions = Object.keys(correctAnswers).length;
+    const answeredQuestions = document.querySelectorAll("button[disabled]").length / 3; // Assuming 3 buttons per question
+
+    if (answeredQuestions === totalQuestions) {
+        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${totalQuestions} питань!`;
+        resultDiv.style.color = "green";
+    } else if (answeredQuestions === totalQuestions) {
+        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${totalQuestions} питань. Спробуйте ще раз!`;
+        resultDiv.style.color = "red";
+    }
+}
+function getRandomFact() {
+    return facts[Math.floor(Math.random() * facts.length)];
+}
 const toggleButton = document.getElementById('theme-toggle'); // Отримуємо тумблер за ID
 const body = document.body; // Отримуємо тіло документа
 
@@ -18,6 +47,8 @@ toggleButton.addEventListener('change', () => {
         localStorage.setItem('theme', 'light'); // Зберігаємо світлу тему
     }
 });
+
+
 let score = 0;
 const correctAnswers = {
     1: "2006",
@@ -39,18 +70,21 @@ function checkAnswer(button, answer) {
     }
 
     // Disable buttons for the current question
-    const buttons = button.parentNode.querySelectorAll("button");
-    buttons.forEach(btn => btn.disabled = true);
+    button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
 
     // Check if all questions are answered
-    if (Object.keys(correctAnswers).length === score) {
-        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${Object.keys(correctAnswers).length} питань!`;
+    const totalQuestions = Object.keys(correctAnswers).length;
+    const answeredQuestions = document.querySelectorAll("button[disabled]").length / 3; // Assuming 3 buttons per question
+
+    if (answeredQuestions === totalQuestions) {
+        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${totalQuestions} питань!`;
         resultDiv.style.color = "green";
-    } else if ([...document.querySelectorAll("button")].every(btn => btn.disabled)) {
-        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${Object.keys(correctAnswers).length} питань. Спробуйте ще раз!`;
+    } else if (answeredQuestions === totalQuestions) {
+        resultDiv.textContent = `Ви відповіли правильно на ${score} з ${totalQuestions} питань. Спробуйте ще раз!`;
         resultDiv.style.color = "red";
     }
 }
+
 // Показувати кнопку при прокручуванні
 window.addEventListener("scroll", () => {
     const backToTop = document.getElementById("backToTop");
@@ -68,6 +102,7 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
 // Список фактів
 const facts = [
     "У Roblox є понад 40 мільйонів активних ігор!",
@@ -79,13 +114,16 @@ const facts = [
     "У Roblox є своя віртуальна валюта під назвою Robux.",
     "Roblox підтримує багатокористувацький режим для взаємодії між гравцями.",
     "На Roblox регулярно проводять віртуальні концерти відомих виконавців.",
-    "Roblox можна використовувати для навчання програмуванню та 3D-моделюванню."
+    "Roblox можна використовувати для навчання програмуванню та 3D-моделюванню.",
+    "Абобус",
+    "1488",
+    "52",
+    "1000-7",
 ];
 
 // Функція для вибору випадкового факту
 function getRandomFact() {
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    return facts[randomIndex];
+    return facts[Math.floor(Math.random() * facts.length)];
 }
 
 // Логіка зміни факту при натисканні кнопки
@@ -94,4 +132,20 @@ const refreshButton = document.getElementById('refresh-btn');
 
 refreshButton.addEventListener('click', () => {
     factElement.textContent = getRandomFact();
+});
+document.getElementById('commentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const commentInput = document.getElementById('commentInput');
+    const commentText = commentInput.value;
+    
+    if (commentText.trim() === '') return;
+
+    const commentDiv = document.createElement('div');
+    commentDiv.className = 'comment';
+    commentDiv.textContent = commentText;
+
+    document.getElementById('comments').appendChild(commentDiv);
+
+    commentInput.value = '';
 });

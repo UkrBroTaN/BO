@@ -10,7 +10,6 @@ img:hover {
     transform: scale(1.1);
 }
 
-
 h6 {
     font-size: 30px;
     margin: 3%;
@@ -69,7 +68,7 @@ nav {
 }
 
 a {
-    font-size: 25px;
+    font-size: 25px; /* Додано px */
     text-decoration: none;
     color: var(--text-color);
 }
@@ -82,54 +81,57 @@ a {
     text-align: right;
 }
 
-:root {
-    --background-color: #e9e9e9;
-    --text-color: black;
-    --container-bg-color: white; /* Світлий фон для контейнера */
-    --nav-bg-color: #d3d3d3; /* Фон навігації у світлій темі */
-    --nav-text-color: black; /* Текст у світлій темі */
-    --a-text-color: black; /* Текст на посиланнях */
-    --menu: white;
-    --menu1: #007bff;
-    --q: #f4f4f4;
-    --q1: #191919;
-    --q2: white;
-    --q3: black;
-    --q4: #2c2c2c;
-    --w: #bdbebd;
-    --e: white;
-    --e1: #2c2c2c;
-    --e2: black;
-    --e3: #f8f9fa;
-    --e4: black;
-    --e5: white;
-    --e6: black;
+:root { 
+    --background-color: #f5f5f5; /* М'який світло-сірий фон */ 
+    --text-color: #333333; /* Трохи темніший текст для кращої контрастності */ 
+    --container-bg-color: #ffffff; /* Білий фон для контейнерів */ 
+    --nav-bg-color: #f0f0f0; /* Легкий сірий фон навігації */ 
+    --nav-text-color: #333333; /* Темний текст навігації */ 
+    --a-text-color: #333333; /* Темний для посилань */ 
+    --menu: #ffffff; /* Біле меню */ 
+    --menu1: #333333; /* Темний для посилань у меню */ 
+    --q: #ffffff; /* Білий фон для запитів */ 
+    --q1: #cccccc; /* Світло-сірий для тіней */ 
+    --q2: white; /* Темний текст */ 
+    --q3: #333333; /* Темний текст */ 
+    --q4: #e0e0e0; /* Легкий сірий для меж */ 
+    --w: #f5f5f5; /* Світло-сірий для елементів */
+    --w1: black; 
+    --e: #ffffff; /* Білий для елементів */ 
+    --e1: #cccccc; /* Світло-сірий для ефектів наведення */ 
+    --e2: #333333; /* Темний для кнопок */ 
+    --e3: #ffffff; /* Білий для тла елементів при наведенні */ 
+    --e4: #333333; /* Темний для меж */ 
+    --e5: #ffffff; /* Білий фон */ 
+    --e6: #333333; /* Темний текст */ 
+    --c: black;
 }
-
-/* Темна тема */
 .dark-theme {
-    --background-color: #191919;
-    --text-color: #ffffff;
-    --container-bg-color: #2c2c2c; /* Темний фон для контейнера */
-    --nav-bg-color: black; /* Фон навігації у темній темі */
-    --nav-text-color: white; /* Текст у темній темі */
-    --a-text-color: white; /* Текст на посиланнях у темній темі */
-    --menu: black;
-    --menu1: #ff8400;
-    --q: #191919;
-    --q1: #f4f4f4;
-    --q2: black;
-    --q3: grey;
-    --q4: white;    
-    --w: #3f3f3f;
-    --e: black;
-    --e1: white;
-    --e2: grey;
-    --e3:#070606;
-    --e4:  grey;
-    --e5: black;
-    --e6: white;
+    --background-color: #191919; /* Чорний */
+    --text-color: #f5f5f5; /* Білий */
+    --container-bg-color: #2c2c2c; /* Темно-сірий */
+    --nav-bg-color: #333333; /* Темний сірий */
+    --nav-text-color: white; /* Білий */
+    --a-text-color: white; /* Світло-сірий для посилань */
+    --menu: #2c2c2c; /* Темно-сірий для меню */
+    --menu1: #d3d3d3; /* Світло-сірий для активних посилань меню */
+    --q: #191919; /* Чорний */
+    --q1: #444444; /* Сірий для тіней */
+    --q2: #333333; /* Темний сірий */
+    --q3: #f5f5f5; /* Білий текст */
+    --q4: #555555; /* Світло-сірий для меж */
+    --w: #2c2c2c; /* Темно-сірий для елементів */
+    --w1: white;
+    --e: black; /* Сірий для елементів */
+    --e1: #444444; /* Світло-сірий для ефектів наведення */
+    --e2: #f5f5f5; /* Темний сірий */
+    --e3: #333333; /* Темно-сірий для фону елементів */
+    --e4: #666666; /* Сірий для меж */
+    --e5: #111111; /* Темний фон */
+    --e6: #f5f5f5; /* Білий текст */
+    --c: white;
 }
+    
 
 /* Слайдер для тумблера */
 .theme-switch {
@@ -186,6 +188,7 @@ body.dark-theme .slider {
 body.dark-theme .slider:before {
     background-color: white;
 }
+
 #Menu ul {
     list-style-type: none;
     padding: 0;
@@ -200,7 +203,7 @@ body.dark-theme .slider:before {
 #Menu a {
     text-decoration: none;
     color: #333;
-    font-size: 25;
+    font-size: 25px; /* Додано px */
     padding: 10px;
     border-radius: 5px;
 }
@@ -209,13 +212,14 @@ body.dark-theme .slider:before {
     background-color: var(--menu);
     color: var(--menu1);
 }
+
 .quiz-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--q);
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--q1) (0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Виправлено */
 }
 
 .quiz-container h2 {
@@ -226,53 +230,7 @@ body.dark-theme .slider:before {
 .question {
     margin-bottom: 20px;
 }
-
-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: var(--q3);
-    color: var(--q2);
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: var(--q4);
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-#backToTop {
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    background-color: var(--w);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-size: 16px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    transform: translateY(20px); /* Початковий стан */
-}
-
-#backToTop.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0); /* Вихідний стан */
-}
 /* Загальні стилі для сторінки */
-/* Контейнер для блоку фактів */
 #fact-container {
     text-align: center;
     padding: 20px;
@@ -282,12 +240,6 @@ button:hover {
     max-width: 600px;
     background-color: var(--e5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-#fact-container:hover {
-    transform: scale(1.02);
-    background-color:   var(--e3);
 }
 
 /* Текст факту */
@@ -316,15 +268,135 @@ button:hover {
     background-color: var(--e1);
     transform: translateY(-2px);
 }
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: var(--w);
+    color: var(--w1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px); /* Початковий стан */
+}
 
-/* Відповідність адаптивності */
-@media (max-width: 768px) {
-    #fact-container {
-        padding: 15px;
-        font-size: 16px;
-    }
-    #refresh-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Вихідний стан */
+}
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--q);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid var(--q4); /* Додаємо рамку навколо всього блоку питань */
+    border-radius: 10px;
+}
+
+.quiz-container h6 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--q3);
+    color: var(--q2);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--q4);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+#comments-section {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--q);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#comments-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#commentForm textarea {
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--q4);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#commentForm button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--c);
+    color: var(--q2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+    background-color: var(--e1);
+}
+
+#comments {
+    margin-top: 20px;
+
+}
+
+.comment {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--e5);
+    border-left: 4px solid var(--q4);
+    border-radius: 5px;
+    box-shadow: var(--q2);
+}
+
+#comments-section{
+    border: 2px solid var(--q4); /* Додаємо рамку навколо всього блоку питань */
+    border-radius: 10px;
+}
+#menu{
+    border-bottom: 2px solid var(--q4); /* Додаємо рамку навколо всього блоку питань */
 }
