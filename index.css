@@ -6,6 +6,23 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
+.start{
+    background:url('https://media1.tenor.com/m/3LoJI237XdMAAAAd/drew-moment.gif');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+
+.text{
+    font-size: 35;
+    color: white;
+}
+
+.info{
+    font-size: 65;
+    color: white;
+}
+
 img:hover {
     transform: scale(1.1);
 }

@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "lysychkob@gmail.com";
     $subject = "Новий коментар на сайті";
     $message = "Ви отримали новий коментар: " . $comment;
-    $headers = "";
+    $headers = "ukrbrotan.github.io/BO/";
     $headers .= "Content-Type: text/plain; charset=UTF-8";
 
     if (mail($to, $subject, $message, $headers)) {
