@@ -6,21 +6,36 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-.start{
-    background:url('https://media1.tenor.com/m/3LoJI237XdMAAAAd/drew-moment.gif');
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-}
-
 .text{
     font-size: 35;
     color: white;
 }
 
-.info{
+#info{
+    font-size: 55;
+    color: white;
+    background:url('https://media1.tenor.com/m/3LoJI237XdMAAAAd/drew-moment.gif');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    padding: 0px 100px;
+}
+
+#info1{
+    
+    border: 8px solid white; /* Змінено товщину рамки для більш витонченого вигляду */
+    display: inline-block; /* Забезпечує тільки необхідний простір навколо тексту */
+    border-radius: 4px; /* Закруглені кути */
+    padding: 5px 10px; /* Внутрішні відступи */
     font-size: 65;
     color: white;
+}
+
+#info1:hover{
+    background-color: white ;
+    transform: scale(1.1);
+    color: #333;
+    transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
@@ -50,6 +65,7 @@ h1 {
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .BO1 a { /* Навігація */
