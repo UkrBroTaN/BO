@@ -15,14 +15,16 @@ img {
     font-size: 55;
     color: white;
     background:url('https://media1.tenor.com/m/3LoJI237XdMAAAAd/drew-moment.gif');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
-    height: 700px;
+    max-width: 88%;
+    min-width: 88%;
+    max-height: 101%;
+    min-height: 101%;
     padding: 0px 100px;
 }
 
 #info1{
-    
     border: 8px solid white; /* Змінено товщину рамки для більш витонченого вигляду */
     display: inline-block; /* Забезпечує тільки необхідний простір навколо тексту */
     border-radius: 4px; /* Закруглені кути */
@@ -58,7 +60,7 @@ h1 {
 }
 
 .container {
-    margin: 0% 3%;
+    margin: -2% 3%;
     background-color: var(--container-bg-color);
 }
 
@@ -69,6 +71,7 @@ body {
 }
 
 .BO1 a { /* Навігація */
+    margin-top: 1000px;
     font-size: 25px;
     color: var(--a-text-color) !important;
     text-decoration: none;
