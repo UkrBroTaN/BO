@@ -32,9 +32,14 @@ img {
 #info1:hover{
     background-color: white ;
     transform: scale(1.1);
-    color: #333;
     transition: transform 0.3s ease-in-out;
 }
+
+/*.nav-logo{
+    font-size: 35px;
+    color: var(--a-text-color);
+    text-align: left;
+}*/
 
 img:hover {
     transform: scale(1.1);
