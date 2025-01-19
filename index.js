@@ -397,3 +397,24 @@ function uploadImage() {
         reader.readAsDataURL(input.files[0]); // Читаємо файл як DataURL
     }
 }
+
+// Отримуємо кнопку і меню
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+// Додаємо обробник подій
+dropdownBtn.addEventListener('click', () => {
+  dropdownContent.classList.toggle('show');
+});
+
+// Закриваємо список, якщо натиснути поза ним
+window.addEventListener('click', (event) => {
+  if (!event.target.matches('.dropdown-btn')) {
+    const dropdowns = document.querySelectorAll('.dropdown-content');
+    dropdowns.forEach((dropdown) => {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    });
+  }
+});

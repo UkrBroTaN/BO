@@ -14,12 +14,7 @@ img:hover {
     transform: scale(1.1);
 }
 
-.text{
-    font-size: 35;
-    color: white;
-}
-
-#info{
+#info{ /*стартове зображення*/
     font-size: 55;
     color: white;
     background:url('https://media1.tenor.com/m/3LoJI237XdMAAAAd/drew-moment.gif');
@@ -28,16 +23,16 @@ img:hover {
     padding: 0px 100px;
 }
 
-#info1{
-    border: 8px solid white; /* Змінено товщину рамки для більш витонченого вигляду */
-    display: inline-block; /* Забезпечує тільки необхідний простір навколо тексту */
-    border-radius: 4px; /* Закруглені кути */
-    padding: 5px 10px; /* Внутрішні відступи */
+#info1{ /*кнопки на стартовому зображенні*/
+    border: 8px solid white; 
+    display: inline-block; 
+    border-radius: 4px; 
+    padding: 5px 10px;
     font-size: 65;
     color: white;
 }
 
-#info1:hover{
+#info1:hover{ /*кнопки на стартовому зображенні при наведені*/
     background-color: white ;
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
@@ -45,7 +40,7 @@ img:hover {
 
 .li-start{
     text-align: left;
-    font-size: 35;
+    font-size: 35;/*лого*/
     font-family: "Bebas Neue", serif;
     color: var(--s);
     display: flex;
@@ -61,23 +56,21 @@ h6 {
     margin: 3%;
 }
 
-.BO {
-    font-size: 25px;
-    text-align: center;
-}
-
 h1 {
     font-size: 35px;
     margin: 3%;
 }
 
-#container {
+#container { /*контеінер*/
     margin: -2% 3%;
     background-color: var(--container-bg-color);
     font-family: 'Times New Roman', Times, serif;
     border: 1px solid var(--bb);
     border-radius: 16px;
+    font-size: 25px;
     margin: -2% 4%;
+    padding: 0% 2%;
+    text-align: center;
 }
 
 body {
@@ -85,11 +78,12 @@ body {
     color: var(--text-color);;
 }
 
-.BO1 a { /* Навігація */
+.BO1 a { /*навігація силки*/
     margin-top: 1000px;
     font-size: 25px;
     color: var(--a-text-color) !important;
     text-decoration: none;
+    text-align: right;
 }
 
 HTML {
@@ -97,9 +91,9 @@ HTML {
 }
 
 nav li {
-    list-style-type: none; /* Прибираємо маркери списку */
-    margin: 0; /* Видаляємо зовнішні відступи */
-    display: inline-block; /* Вирівнюємо пункти меню в один рядок */
+    list-style-type: none; 
+    margin: 0; 
+    display: inline-block; 
 }
 
 nav a {
@@ -114,22 +108,10 @@ nav {
     justify-content: space-between;
 }
 
-.BO2 {
-    text-align: right;
-}
-
 a {
     font-size: 25px; /* Додано px */
     text-decoration: none;
     color: var(--text-color);
-}
-
-.BO3 {
-    text-align: right;
-}
-
-.BO4 {
-    text-align: right;
 }
 
 :root { 
@@ -158,6 +140,9 @@ a {
     --c: black;
     --s: black;
     --bb: #cccccc;
+    --l: #333333;
+    --la: white;
+    --l-t: black;
 }
 .dark-theme {
     --background-color: #191919; /* Чорний */
@@ -185,24 +170,27 @@ a {
     --c: white;
     --s: white;
     --bb: #333333;
+    --l: #444444;
+    --la: black;
+    --l-t: white;
 }
     
 
-/* Слайдер для тумблера */
-.theme-switch {
+
+.theme-switch {/* Слайдер для тумблера */
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
 
-.theme-switch input {
+.theme-switch input {/*тумблер 2*/
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.slider {
+.slider { /*тумблер 3*/
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -214,7 +202,7 @@ a {
     border-radius: 34px;
 }
 
-.slider:before {
+.slider:before {/*тумблер 4*/
     position: absolute;
     content: "";
     height: 26px;
@@ -226,21 +214,20 @@ a {
     transition: 0.4s;
 }
 
-/* Коли тумблер перемикається на темну тему */
-input:checked + .slider {
-    background-color: #4CAF50; /* Темний фон для тумблера */
+
+input:checked + .slider { /*тумблер 5*/
+    background-color: #4CAF50;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px); /* Переміщаємо кружок праворуч */
+input:checked + .slider:before {/*тумблер 6*/
+    transform: translateX(26px);
 }
 
-/* Для темної теми */
-body.dark-theme .slider {
+body.dark-theme .slider {/*тумблер 7*/
     background-color: #333;
 }
 
-body.dark-theme .slider:before {
+body.dark-theme .slider:before {/*тумблер 8*/
     background-color: white;
 }
 
@@ -456,67 +443,9 @@ button:hover {
     border-bottom: 2px solid var(--q4); /* Додаємо рамку навколо всього блоку питань */
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Галерея */
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.image-viewer {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.image-viewer img {
-    max-width: 80vw;
-    max-height: 80vh;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 2em;
-    padding: 10px 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-}
-
-.nav-button.prev {
-    left: -60px;
-}
-
-.nav-button.next {
-    right: -60px;
-}
-
-.upload-button {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 1.5em;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.your-slider-buttons {
-    display: none;
-}
