@@ -6,7 +6,6 @@ img {
     max-height: 90%;
     min-height: 90%;
     transition: transform 0.3s ease-in-out;
-    border: 1px solid var(--bb);
     border-radius: 16px;
 }
 
@@ -456,4 +455,22 @@ body {
 
 .video-row2{
     display: flex;
+}
+
+.o{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDMhMjW-3VBsdVyrzTzwlqm5EOoWx1ZikHQQ&s");   
+    min-width: 87%;
+    max-width: 87%;
+    max-height: 87%;
+    min-height: 87%;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, background-image 0.3s ease;
+    border-radius: 16px;
+}
+
+.o:hover{
+    background-image: url("https://media1.tenor.com/m/CWgfFh7ozHkAAAAC/rick-astly-rick-rolled.gif");
+    transform: scale(1.1);
 }
